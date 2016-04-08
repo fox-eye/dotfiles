@@ -1,0 +1,30 @@
+[color]
+	ui = true
+[user]
+	name = Lucas Romano
+	email = lucas.romano@ngahr.com
+[alias]
+	vomit = commit
+	lg = log --graph --decorate --oneline --abbrev-commit --all
+	st = status
+	co = checkout
+	s = status -s
+	cob = checkout -b
+	rb = rebase
+	rbi = rebase -i
+	mg = merge
+	mgnoff = merge --no-ff
+	cm = commit -m
+	br = branch
+	addall = add .
+	unstage = reset HEAD
+	diffs = diff --staged
+	cma = commit --amend
+[core]
+	autocrlf = input
+[push]
+	default = current
+[rerere]
+	enabled = true
+[url "https://"]
+	insteadOf = git://
