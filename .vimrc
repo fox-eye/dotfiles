@@ -6,7 +6,7 @@ syntax on
 
 set number
 set backspace=indent,eol,start "Allow backspace in insert mode
-set history=50 "command history length
+set history=200 "command history length
 set ruler
 set laststatus=2
 set visualbell "no sounds
