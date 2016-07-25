@@ -49,4 +49,7 @@ let NERDTreeWinSize = 50
 " remaps
 inoremap jk <ESC>
 
+" paste mode (for system paste)
+set pastetoggle=<f5>
+
 set runtimepath^=~/.vim/bundle/ctrlp.vim
