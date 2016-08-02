@@ -52,4 +52,7 @@ inoremap jk <ESC>
 " paste mode (for system paste)
 set pastetoggle=<f5>
 
+" case sensitivity
+set smartcase
+
 set runtimepath^=~/.vim/bundle/ctrlp.vim
