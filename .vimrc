@@ -55,4 +55,7 @@ set pastetoggle=<f5>
 " case sensitivity
 set smartcase
 
+" Ack with silver searcher config
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 set runtimepath^=~/.vim/bundle/ctrlp.vim
