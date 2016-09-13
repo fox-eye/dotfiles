@@ -70,4 +70,7 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+" Avoid swp files to be written
+set noswapfile
+
 set runtimepath^=~/.vim/bundle/ctrlp.vim

@@ -22,6 +22,7 @@
 	cma = commit --amend
 [core]
 	autocrlf = input
+	editor = vim
 [push]
 	default = current
 [rerere]
