@@ -48,6 +48,7 @@ let NERDTreeWinSize = 50
 
 " remaps
 inoremap jk <ESC>
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 " paste mode (for system paste)
 set pastetoggle=<f5>
