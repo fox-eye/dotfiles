@@ -12,9 +12,22 @@ set laststatus=2
 set visualbell "no sounds
 set autoread  "reload files changed outside of vim
 
-" Pathogen config
-execute pathogen#infect() 
-call pathogen#helptags()
+" Vim plug - plugins - :PlugInstall to install 
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'mileszs/ack.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'mattn/emmet-vim'
+Plug 'Quramy/tsuquyomi'
+Plug 'Shougo/vimproc.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'qpkorr/vim-bufkill'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-surround'
+call plug#end()
 
 " Appearence
 colorscheme onedark
