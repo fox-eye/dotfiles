@@ -27,6 +27,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 " Appearence
