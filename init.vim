@@ -17,7 +17,6 @@ set autoread  "reload files changed outside of vim
 " Vim plug - plugins - :PlugInstall to install 
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
-"Plug 'kien/ctrlp.vim'
 Plug 'mattn/emmet-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
@@ -32,8 +31,8 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'mhartington/nvim-typescript'
 Plug 'brooth/far.vim'
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'neomake/neomake'
 Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
+Plug 'w0rp/ale'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -46,7 +45,6 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
-Plug 'zchee/deoplete-jedi'
 call plug#end()
 
 " Appearence
@@ -92,6 +90,13 @@ retab
 set incsearch       " Find the next match as we type the search
 set hlsearch        " Highlight searches by default
 
+" Git
+if exists('&signcolumn')  " Vim 7.4.2201
+  set signcolumn=yes
+else
+  let g:gitgutter_sign_column_always = 1
+endif
+
 " Nerd tree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -103,23 +108,12 @@ let NERDTreeWinSize = 50
 " Deoplete
 let g:deoplete#enable_at_startup = 1
 
-" Neomake
-let g:neomake_javascript_enabled_makers = ['eslint']
-
-let g:neomake_typescript_tsc_maker = {
-            \ 'append_file': 0,
-            \ 'args': ['--project', getcwd() . '/tsconfig.json', '--noEmit'],
-            \ 'errorformat':
-            \   '%E%f %#(%l\,%c): error %m,' .
-            \   '%E%f %#(%l\,%c): %m,' .
-            \   '%Eerror %m,' .
-            \   '%C%\s%\+%m'
-            \}
-
-let g:neomake_typescript_enabled_makers = ['tsc']
+" Ale
+let g:airline#extensions#ale#enabled = 1
+let g:ale_sign_column_always = 1
 
 " Python
-let g:python3_host_prog = '/Users/fox/.pyenv/versions/neovim3/bin/python'
+let g:python3_host_prog = '/usr/bin/python'
 
 " remaps
 inoremap jk <ESC>
@@ -129,7 +123,7 @@ nnoremap <C-b> :Buffers<CR>
 nnoremap <C-g>g :Ag<CR>
 nnoremap <C-g>c :Commands<CR>
 nnoremap <C-f>l :BLines<CR>
-nnoremap <C-p> :Files<CR>
+nnoremap <C-p> :GFiles<CR>
 
 " paste mode (for system paste)
 set pastetoggle=<f5>
