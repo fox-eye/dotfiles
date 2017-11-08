@@ -109,8 +109,10 @@ let NERDTreeWinSize = 50
 let g:deoplete#enable_at_startup = 1
 
 " Ale
-let g:airline#extensions#ale#enabled = 1
 let g:ale_sign_column_always = 1
+let g:airline#extensions#ale#enabled = 1
+let g:ale_sign_error = '!!'
+let g:ale_sign_warning = '!'
 
 " Python
 let g:python3_host_prog = '/usr/bin/python'
@@ -120,9 +122,8 @@ inoremap jk <ESC>
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 nnoremap <C-b> :Buffers<CR>
-nnoremap <C-g>g :Ag<CR>
-nnoremap <C-g>c :Commands<CR>
-nnoremap <C-f>l :BLines<CR>
+nnoremap <S-r> :Ag<CR>
+nnoremap <C-o> :BLines<CR>
 nnoremap <C-p> :GFiles<CR>
 
 " paste mode (for system paste)
