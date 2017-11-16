@@ -66,7 +66,7 @@ if (empty($TMUX))
   endif
 endif
 
-set background=dark " light or dark
+set background=light " light or dark
 colorscheme one
 
 let g:airline_theme='one'
@@ -121,10 +121,11 @@ let g:python3_host_prog = '/usr/bin/python'
 inoremap jk <ESC>
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
-nnoremap <C-b> :Buffers<CR>
-nnoremap <S-r> :Ag<CR>
-nnoremap <C-o> :BLines<CR>
+nnoremap ag :Ag<CR>
+nnoremap <C-b>f :Buffers<CR>
+nnoremap <C-l> :BLines<CR>
 nnoremap <C-p> :GFiles<CR>
+nnoremap <C-h> :History<CR>
 
 " paste mode (for system paste)
 set pastetoggle=<f5>
