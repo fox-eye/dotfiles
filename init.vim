@@ -27,7 +27,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 Plug 'rakr/vim-one'
-Plug 'jlanzarotta/bufexplorer'
 Plug 'mhartington/nvim-typescript'
 Plug 'brooth/far.vim'
 Plug 'HerringtonDarkholme/yats.vim'
@@ -122,7 +121,7 @@ inoremap jk <ESC>
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 nnoremap ag :Ag<CR>
-nnoremap <C-b>f :Buffers<CR>
+nnoremap bf :Buffers<CR>
 nnoremap <C-l> :BLines<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-h> :History<CR>
