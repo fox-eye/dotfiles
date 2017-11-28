@@ -28,10 +28,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 Plug 'rakr/vim-one'
 Plug 'mhartington/nvim-typescript'
-Plug 'brooth/far.vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
 Plug 'w0rp/ale'
+Plug 'eugen0329/vim-esearch'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
